@@ -1,6 +1,6 @@
 settings:
   title: 'My Status Page'
-  #url: 'https://status-page.eidam.dev' # used for Slack messages
+  #url: 'https://status.onecf.xyz' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 60 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
@@ -15,19 +15,19 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: liberate# unique identifier
+  - id: liberate.cloudf.xyz# unique identifier
     name: liberate.cloudf.xyz
-    description: 'Test' # default=empty
+    description: 'Test Endpoint' # default=empty
     url: 'https://liberate.cloudf.xyz' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
 
-  - id: unifi.liberate.com
-    name: unifi.liberate.com
+  - id: unifi.cloudf.xyz
+    name: unifi.cloudf.xyz
     description: 'Unifi'
-    url: 'https://www.cloudflare.com'
+    url: 'https://unifi.cloudf.xyz'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
